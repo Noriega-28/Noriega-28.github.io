@@ -1,1 +1,1877 @@
 # Noriega-28.github.io
+<DOCTYPE html>
+  <head>
+    <body>
+      <p>hola</p>
+      .calendar-grid
+  .title
+    h1
+      span.title-1
+        | CSS
+      span.title-2
+        | Christmas
+      span.title-3
+        | Calendar
+  - for (var day = 1; day <= 24; day++)
+    div.day(class='day-' + day)
+      label
+        input(type='checkbox')
+        .door
+          .front=day
+          .back
+        .inside
+          case day
+            //- CSS effects for the days
+            when 1
+              .gingerbread-man-container
+                .gingerbread-man
+                  .head
+                    .eyebrow.eyebrow--left
+                    .eyebrow.eyebrow--right
+                    .eye.eye--left
+                    .eye.eye--right
+                    .mouth
+                      .mouth__lower-lip
+                      .mouth__left-lip
+                      .mouth__right-lip
+                      .mouth__upper-lip
+                  .body
+                    .arm.arm--left
+                    .arm.arm--right
+                    .leg.leg--left
+                    .leg.leg--right
+                    .belt
+                    .button.button--top
+                    .button.button--bottom
+                    
+            when 2
+              .snowflake-container
+                .snowflake-resize
+                  .snowflake
+                    - for (var side = 1; side <= 6; side++)
+                      .side(class='side-' + side)
+                        .side-l-1
+                        .side-r-1
+                        .side-l-2
+                        .side-r-2
+                        
+            when 3
+              .stocking-container
+                .stocking
+                  .stocking-hanger
+                  .stocking-wool
+                  .stocking-leg
+                    .stocking-heel
+                  .stocking-foot
+                    .stocking-heel
+                    
+            when 4
+              .gift-box-day
+                .gift-box-container
+                  .gift-box
+                    .gift-box__side.gift-box__side--front
+                    .gift-box__side.gift-box__side--back
+                    .gift-box__side.gift-box__side--left
+                    .gift-box__side.gift-box__side--right
+                    .gift-box__end.gift-box__side--top
+                    .gift-box__end.gift-box__side--bottom
+
+                    .gift-box-lid__side.gift-box-lid__side--front
+                    .gift-box-lid__side.gift-box-lid__side--back
+                    .gift-box-lid__side.gift-box-lid__side--left
+                    .gift-box-lid__side.gift-box-lid__side--right
+                    .gift-box-lid__end.gift-box-lid__side--top
+
+                    - for (var i = 0; i <= 40; i++)
+                      .ribbon-l(style='--gift-box-position: ' + i + 'px; border-color: ' + ( i < 3 || i > 37 ? 'var(--gift-box-edge-color)' : 'var(--wrap-ribbon-color)'))
+                    .ribbon-l-end
+                    - for (var i = 0; i <= 40; i++)
+                      .ribbon-r(style='--gift-box-position: ' + i + 'px; border-color: ' + ( i < 3 || i > 37 ? 'var(--gift-box-edge-color)' : 'var(--wrap-ribbon-color)'))
+                    .ribbon-r-end
+                    
+                    
+            when 5
+              .sledge-container
+                .sledge
+                  .sledge-runner__front
+                  .sledge-runner__front.sledge-runner__front--top
+                  .sledge-runner
+                    .sledge-runner__left-leg
+                    .sledge-runner__right-leg
+
+                  .sledge-runner__back
+                    .sledge-runner__front
+                    .sledge-runner__front.sledge-runner__front--top
+                    .sledge-runner
+                      .sledge-runner__left-leg
+                      .sledge-runner__right-leg
+
+                  .sledge-seat
+                    .sledge-top
+                      - for (var i = 1; i <= 6; i++)
+                        .sledge-top__piece
+                    .sledge-back
+                      - for (var i = 1; i <= 6; i++)
+                        .sledge-back__piece
+                    .sledge-side
+                    
+                    
+            when 6
+              .santa-container
+                .santa
+                  .santa-head
+                    - for (var i = 1; i <= 12; i++)
+                      .santa-beard
+                    .santa-face
+                      .santa-nose
+                    .santa-moustache.santa-moustache--left
+                    .santa-moustache.santa-moustache--right
+                    .santa-nose
+                    .santa-eye.santa-eye--left
+                    .santa-eye.santa-eye--right
+                  .santa-hat
+                    .santa-hat-background
+                    .santa-hat-front
+                      - for (var i = 1; i <= 15; i++)
+                        .santa-hat-front-bg
+                      div
+                        - for (var i = 1; i <= 4; i++)
+                          .santa-hat-front-side
+                    .santa-hat-pompom
+                      - for (var i = 1; i <= 6; i++)
+                        .santa-hat-pompom-bg
+                        
+                        
+                        
+                        
+            when 7
+              .candle-container
+                .candle
+                  .candle__body
+                  .candle__bottom
+                  .candle__wax-1
+                  .candle__wax-2
+                  .candle__wax-3
+                  .candle-string
+                  .candle__light
+                    .candle__flame
+                      - for (var i = 1; i <= 40; i++)
+                        .candle__flame-burn.burn-a
+                      - for (var i = 1; i <= 40; i++)
+                        .candle__flame-burn
+
+            default
+              .inside-empty
+                | Come back another day!
+                
+                
+
+footer
+  div
+    span.footer-info i
+    div
+      | Follow me on Twitter: 
+      a(href='https://twitter.com/FullStackMaker' target='_blank')
+        | @FullStackMaker
+          
+          
+          
+//-
+  References:
+  - background image from freepik.com
+  - calendar grid idea: https://webdesign.tutsplus.com/tutorials/how-to-build-a-festive-advent-calendar-with-css-grid--cms-30070
+  
+  Day by day:
+  - Day 1 - gingerbread man
+    https://codepen.io/johnnyfekete/pen/ZEpGerj
+    
+  - Day 2 - snowflake
+    https://codepen.io/johnnyfekete/pen/ExgVmaJ
+    
+  - Day 3 - stocking
+    https://codepen.io/johnnyfekete/pen/BaLjoaV
+
+  - Day 4 - Animated 3D gift box
+    https://codepen.io/johnnyfekete/pen/NWRxmwG
+    
+  - Day 5 - Sledge in the snow
+    https://codepen.io/johnnyfekete/pen/wvzGoRr
+    
+  - Day 6 - Santa
+    https://codepen.io/johnnyfekete/pen/oNzxMPW
+
+  - Day 7 - candle with a flame
+    https://codepen.io/johnnyfekete/pen/ExgyPrb
+      <style>
+        @use postcss-each;
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&display=swap');
+
+body {
+  background: url(https://i.imgur.com/FnJbmo1.jpg) no-repeat top center #8ac1d6;
+  background-size: cover;
+  font-family: 'Mountains of Christmas', cursive;
+  display: flex;
+  flex-direction: column;
+}
+
+/* calendar layout */
+.calendar-grid {
+  display: grid;
+  width: 94%;
+  max-width: 900px;
+  margin: 3% auto 2rem auto;
+  
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 1rem;
+  
+  transform: translate3d(0px, 0px, 0px);
+  
+  grid-template-areas: 'title  title  title'
+                       'day22  day3   day8'
+                       'day9   day18  day11'
+                       'day2   day24  day13'
+                       'day12  day10  day4'
+                       'day20  day1   day7'
+                       'day5   day14  day17'
+                       'day16  day23  day6'
+                       'day15  day21  day19'
+}
+
+/* media query */
+@media only screen and (min-width: 576px) {
+  .calendar-grid {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: 'title  title  title  day5   day17  day15'
+                         'title  title  title  day11  day20  day16'
+                         'title  title  title  day1   day18  day12'
+                         'day6   day22  day14  day24  day24  day4  '
+                         'day10  day21  day2   day24  day24  day8'
+                         'day3   day9   day7   day13  day23  day19';
+  } 
+}
+
+/* title */
+.calendar-grid .title {
+  grid-area: title;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar-grid .title h1 {
+  font-size: 2rem;
+  text-align: center;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: row;
+}
+
+@media only screen and (min-width: 576px) {
+  .calendar-grid .title h1 {
+    font-size: 5rem;
+    flex-direction: column;
+  }
+}
+
+.calendar-grid .title-1 {
+  color: #9c163f;
+  display: block;
+  transform: rotate(-10deg);
+  margin-right: 1rem;
+}
+
+.calendar-grid .title-2 {
+  color: #413486;
+  display: block;
+  transform: rotate(5deg);
+  margin-right: 1rem;
+}
+
+.calendar-grid .title-3 {
+  display: block;
+  transform: rotate(-5deg);
+}
+
+/* opening/closing doors */
+.calendar-grid .day {
+  transform: translate3d(0px, 0px, 0px);
+  position: relative;
+}
+
+.calendar-grid input {
+  display: none;
+}
+
+.calendar-grid label {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  display: flex;
+  min-height: 100%;
+  width: 100%;
+  height: calc(85vw / 3);
+  position: relative;
+}
+
+@media only screen and (min-width: 576px) {
+  .calendar-grid label {
+    height: 136px;
+  }
+}
+
+.calendar-grid .door {
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: all 300ms;
+  border: 2px dashed rgba(0, 0, 0, 0.2);
+  border-radius: 0.6rem;
+  transform-origin: 0% 50%;
+}
+
+.calendar-grid .door div {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #10303c;
+  font-size: 3em;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.calendar-grid .door .back {
+  background: linear-gradient(
+    to right,
+    #384044,
+    #2e454f
+  );
+  transform: rotateY(-180deg);
+}
+
+.calendar-grid label:hover .door {
+  border-color: #10303c;
+}
+
+.calendar-grid :checked + .door {
+  transform: rotateY(-180deg);
+  border-color: #10303c;
+  border-style: solid;
+}
+
+.calendar-grid .inside {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 0.6rem;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+.calendar-grid .inside-empty {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #2f4f8c;
+  color: #ffffff;
+}
+
+.calendar-grid :checked ~ .inside {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+footer {
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: 1rem;
+  opacity: 0.5;
+  transition: opacity 400ms ease-in-out;
+}
+
+footer:hover {
+  opacity: 1;
+}
+
+footer div {
+  display: flex;
+  align-items: center;
+  background-color: #161e2b;
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+
+footer .footer-info {
+  width: 2.8rem;
+  text-align: center;
+  font-family: 'Times New Roman', serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 2.6rem;
+  color: #ffffff;
+}
+
+footer div div {
+  position: relative;
+  margin-right: -15.3rem;
+  display: inline-block;
+  border-radius: 0.4rem;
+  padding: 0.6rem 0.8rem 0.6rem 0.2rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.8rem;
+  color: #80a7e7;
+  line-height: 1.6rem;
+  transition: all 500ms ease-in-out;
+}
+
+@media only screen and (min-width: 576px) {
+  footer div div {
+    font-size: 1rem;
+    margin-right: -18.5rem;
+  }
+}
+
+footer:hover div div {
+  margin-right: 0px;
+}
+
+footer a {
+  margin-left: 0.2rem;
+  color: #ffffff;
+}
+
+/* Calendar day positions and z-indexes */
+.calendar-grid .day-1 { grid-area: day1; z-index: 2; }
+.calendar-grid .day-2 { grid-area: day2; z-index: 1; }
+.calendar-grid .day-3 { grid-area: day3; z-index: 2; }
+.calendar-grid .day-4 { grid-area: day4; z-index: 3; }
+.calendar-grid .day-5 { grid-area: day5; z-index: 1; }
+.calendar-grid .day-6 { grid-area: day6; z-index: 3; }
+.calendar-grid .day-7 { grid-area: day7; z-index: 3; }
+.calendar-grid .day-8 { grid-area: day8; z-index: 3; }
+.calendar-grid .day-9 { grid-area: day9; z-index: 1; }
+.calendar-grid .day-10 { grid-area: day10; z-index: 2; }
+.calendar-grid .day-11 { grid-area: day11; z-index: 3; }
+.calendar-grid .day-12 { grid-area: day12; z-index: 1; }
+.calendar-grid .day-13 { grid-area: day13; z-index: 3; }
+.calendar-grid .day-14 { grid-area: day14; z-index: 2; }
+.calendar-grid .day-15 { grid-area: day15; z-index: 1; }
+.calendar-grid .day-16 { grid-area: day16; z-index: 1; }
+.calendar-grid .day-17 { grid-area: day17; z-index: 3; }
+.calendar-grid .day-18 { grid-area: day18; z-index: 2; }
+.calendar-grid .day-19 { grid-area: day19; z-index: 3; }
+.calendar-grid .day-20 { grid-area: day20; z-index: 1; }
+.calendar-grid .day-21 { grid-area: day21; z-index: 2; }
+.calendar-grid .day-22 { grid-area: day22; z-index: 1; }
+.calendar-grid .day-23 { grid-area: day23; z-index: 2; }
+.calendar-grid .day-24 { grid-area: day24; z-index: 2; }
+
+@media only screen and (min-width: 576px) {
+  .calendar-grid .day-1 { z-index: 1; }
+  .calendar-grid .day-2 { z-index: 3; }
+  .calendar-grid .day-3 { z-index: 1; }
+  .calendar-grid .day-4 { z-index: 5; }
+  .calendar-grid .day-5 { z-index: 1; }
+  .calendar-grid .day-6 { z-index: 1; }
+  .calendar-grid .day-7 { z-index: 3; }
+  .calendar-grid .day-8 { z-index: 5; }
+  .calendar-grid .day-9 { z-index: 2; }
+  .calendar-grid .day-10 { z-index: 1; }
+  .calendar-grid .day-11 { z-index: 1; }
+  .calendar-grid .day-12 { z-index: 3; }
+  .calendar-grid .day-13 { z-index: 4; }
+  .calendar-grid .day-14 { z-index: 3; }
+  .calendar-grid .day-15 { z-index: 3; }
+  .calendar-grid .day-16 { z-index: 3; }
+  .calendar-grid .day-17 { z-index: 2; }
+  .calendar-grid .day-18 { z-index: 2; }
+  .calendar-grid .day-19 { z-index: 6; }
+  .calendar-grid .day-20 { z-index: 2; }
+  .calendar-grid .day-21 { z-index: 2; }
+  .calendar-grid .day-22 { z-index: 2; }
+  .calendar-grid .day-23 { z-index: 5; }
+  .calendar-grid .day-24 { z-index: 4; }
+}
+
+
+
+/**
+ * CALENDAR DAYS
+ */
+
+
+/**
+ * Day 1 - Gingerbread man
+ * https://codepen.io/johnnyfekete/pen/ZEpGerj
+ */
+:root {
+  --ginger-color: #c5753d;
+  --dark-ginger-color: #974919;
+  --white-color: #f0e5d9;
+  --green-color: #50af52;
+  --red-color: #b22922;
+}
+
+.gingerbread-man-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: repeating-linear-gradient(
+    75deg,
+    transparent,
+    transparent 20px,
+    #9E1628 10px,
+    #9E1628 40px
+  ),
+  linear-gradient(
+    to bottom,
+    #B11E31,
+    #C23446
+  );
+}
+
+.gingerbread-man-container::after {
+  content: '';
+  display: block;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.5) 25%, rgba(0, 0, 0, 0) 50%);
+  
+}
+.gingerbread-man {
+  transform: scale(0.46) translateY(-6.5rem);
+  position: relative;
+}
+
+@media only screen and (min-width: 576px) {
+  .gingerbread-man {
+    transform: scale(0.56) translateY(-3.7rem);
+  }
+}
+
+.gingerbread-man .head {
+  width: 5rem;
+  height: 5rem;
+  position: relative;
+}
+
+.gingerbread-man .head::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--ginger-color);
+  border-radius: 2.2rem;
+  transform: rotate(-15deg);
+}
+
+.gingerbread-man .eye {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background-color: var(--white-color);
+  box-shadow: -1px 1px 1px 0 rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 2;
+}
+
+.gingerbread-man .eye.eye--left {
+  left: 22%;
+  top: 45%;
+}
+
+.gingerbread-man .eye.eye--right {
+  right: 25%;
+  top: 40%;
+}
+
+.gingerbread-man .eyebrow {
+  position: absolute;
+  z-index: 2;
+  height: 0.3rem;
+  border-radius: 0.3rem;
+  background-color: var(--green-color);
+  box-shadow: -1px 1px 1px 0 rgba(0, 0, 0, 0.5), inset -1px 1px 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.gingerbread-man .eyebrow.eyebrow--left {
+  top: 1.6rem;
+  left: 0.8rem;
+  transform: rotate(-35deg);
+  width: 0.9rem;
+  height: 0.25rem;
+}
+
+.gingerbread-man .eyebrow.eyebrow--right {
+  top: 1.35rem;
+  right: 1.32rem;
+  transform: rotate(10deg);
+  width: 0.9rem;
+  height: 0.3rem;
+}
+
+.gingerbread-man .mouth {
+  position: absolute;
+  z-index: 2;
+  width: 3rem;
+  height: 3rem;
+  top: 1.7rem;
+  left: 1rem;
+  transform-origin: center center;
+  transform: rotate(-150deg);
+}
+
+.gingerbread-man .mouth div {
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.gingerbread-man .mouth__lower-lip {
+  width: 1.5rem;
+  height: 1.5rem;
+  overflow: hidden;
+}
+
+.gingerbread-man .mouth__lower-lip::after {
+  content: '';
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  border: 3px solid var(--red-color);
+  border-radius: 50%;
+}
+
+.gingerbread-man .mouth__left-lip {
+  width: 0.75rem;
+  height: 1.5rem;
+  overflow: hidden;
+  left: 1.5rem;
+  top: 0rem;
+}
+
+.gingerbread-man .mouth__left-lip::after {
+  content: '';
+  display: block;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-left: -0.5rem;
+  border: 3px solid var(--red-color);
+  border-radius: 50%;
+}
+
+.gingerbread-man .mouth__right-lip {
+  width: 1rem;
+  height: 0.5rem;
+  overflow: hidden;
+  left: 0rem;
+  top: 1.5rem;
+}
+
+.gingerbread-man .mouth__right-lip::after {
+  content: '';
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-top: -0.4rem;
+  border: 3px solid var(--red-color);
+  border-radius: 50%;
+}
+
+.gingerbread-man .mouth__upper-lip {
+  width: 0.8rem;
+  height: 0.7rem;
+  overflow: hidden;
+  left: 0.7rem;
+  top: 0.8rem;
+}
+
+.gingerbread-man .mouth__upper-lip::after {
+  content: '';
+  display: block;
+  width: 1.8rem;
+  height: 1.0rem;
+  margin-top: 0.1rem;
+  border: 3px solid var(--red-color);
+  border-radius: 50%;
+}
+
+.gingerbread-man .body {
+  position: relative;
+  width: 5rem;
+  height: 8rem;
+}
+
+.gingerbread-man .arm {
+  width: 5rem;
+  height: 2.2rem;
+  background-color: var(--ginger-color);
+  background: linear-gradient(to right, var(--dark-ginger-color) 0%, var(--ginger-color) 50%);
+  border-radius: 1rem;
+  position: absolute;
+}
+
+.gingerbread-man .arm::after {
+  content: '\00a0\00a0\00a0\00a0\00a0';
+  width: 2.2rem;
+  height: 1rem;
+  overflow: hidden;
+  display: block;
+  font-size: 2rem;
+  line-height: 0;
+  text-decoration: underline white wavy;
+  transform: rotate(90deg) translateX(0.6rem) translateY(-0.5rem);
+  transform-origin: center center;
+}
+
+.gingerbread-man .arm.arm--left {
+  transform: rotate(-35deg) translateX(-1.5rem) translateY(-0.8rem);
+}
+
+.gingerbread-man .arm.arm--right {
+  transform: rotate(-145deg) translateX(-1.5rem) translateY(1rem);
+}
+
+.gingerbread-man .leg {
+  width: 2.2rem;
+  height: 8rem;
+  background-color: var(--ginger-color);
+  background: linear-gradient(to top, var(--dark-ginger-color) 0%, var(--ginger-color) 40%);
+  border-radius: 1rem;
+  position: absolute;
+}
+
+.gingerbread-man .leg::after {
+  content: '\00a0\00a0\00a0\00a0\00a0';
+  width: 2.2rem;
+  height: 1rem;
+  overflow: hidden;
+  display: block;
+  font-size: 2rem;
+  line-height: 0;
+  text-decoration: underline white wavy;
+  position: absolute;
+  bottom: 1.2rem;
+}
+
+.gingerbread-man .leg.leg--left {
+  transform: rotate(10deg) translateX(0.5rem) translateY(0rem);
+}
+
+.gingerbread-man .leg.leg--right {
+  transform: rotate(-10deg) translateX(2.4rem) translateY(0.4rem);
+}
+
+.gingerbread-man .belt::after {
+  content: '\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0';
+  width: 4.1rem;
+  height: 2rem;
+  overflow: hidden;
+  display: block;
+  font-size: 1.8rem;
+  line-height: 0;
+  text-decoration: underline white wavy;
+  position: absolute;
+  top: 3.3rem;
+  left: 0.5rem;
+  z-index: 3;
+  transform: rotate(4deg);
+}
+
+.gingerbread-man .button {
+  position: absolute;
+  width: 1.2rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  background-color: var(--white-color);
+}
+
+.gingerbread-man .button::after {
+  content: '';
+  display: block;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  background: var(--green-color);
+  box-shadow: -1px 1px 1px 0 rgba(0, 0, 0, 0.3), inset -3px 3px 5px 0 rgba(255, 255, 255, 0.2);
+  margin-left: 0.15rem;
+}
+
+.gingerbread-man .button.button--top {
+  left: 2rem;
+  top: 0.3rem;
+}
+
+.gingerbread-man .button.button--bottom {
+  left: 2.1rem;
+  top: 2.1rem;
+  transform: rotate(145deg)
+}
+
+
+/**
+ * Day 2 - Snowflake
+ * https://codepen.io/johnnyfekete/pen/ExgVmaJ
+ */
+:root {
+  --snowflake-color: #ffffff;
+}
+
+.snowflake-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, red 0, #002255 100%);
+}
+
+.snowflake-resize {
+  transform: scale(0.3);
+}
+@media only screen and (min-width: 576px) {
+  .snowflake-resize {
+    transform: scale(0.35);
+  }
+}
+
+.snowflake {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  animation: rotation 20s infinite linear;
+}
+
+.snowflake div {
+  position: absolute;
+  background-color: var(--snowflake-color);
+  width: 1rem;
+  border-radius: 0.5rem;
+}
+
+.snowflake .side {
+  bottom: -0.5rem;
+  left: -0.5rem;
+  height: 10rem;
+  transform-origin: 0.5rem 9.5rem;
+}
+
+.snowflake .side-l-1 {
+  bottom: 2.5rem;
+  left: 0rem;
+  height: 5rem;
+  transform-origin: 0.5rem 4.5rem;
+  transform: rotate(-60deg);
+}
+
+.snowflake .side-r-1 {
+  bottom: 2.5rem;
+  left: 0rem;
+  height: 5rem;
+  transform-origin: 0.5rem 4.5rem;
+  transform: rotate(60deg);
+}
+
+.snowflake .side-l-2 {
+  bottom: 6.5rem;
+  left: 0rem;
+  width: 0.8rem;
+  height: 3rem;
+  transform-origin: 0.4rem 2.5rem;
+  transform: rotate(-45deg);
+}
+
+.snowflake .side-r-2 {
+  bottom: 6.5rem;
+  left: 0.2rem;
+  width: 0.8rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  transform-origin: 0.4rem 2.5rem;
+  transform: rotate(45deg);
+}
+
+.snowflake .side-2 { transform: rotate(60deg); }
+.snowflake .side-3 { transform: rotate(120deg); }
+.snowflake .side-4 { transform: rotate(180deg); }
+.snowflake .side-5 { transform: rotate(240deg); }
+.snowflake .side-6 { transform: rotate(300deg); }
+
+@keyframes snowflake-rotation-large {
+  from {
+    transform: rotate(0deg) scale(0.35);
+  }
+  to {
+    transform: rotate(359deg) scale(0.35);
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+
+/**
+ * Day 3 - Stocking
+ * https://codepen.io/johnnyfekete/pen/BaLjoaV
+ */
+
+:root {
+  --stocking-background: #b2b09b;
+  --stocking-red: #a93f55;
+  --stocking-heel: #f2545b;
+  --stocking-blue: rgba(25, 50, 60, 0.4);
+  --stocking-wool: #f3f7f0;
+}
+
+.stocking-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, var(--stocking-background) 0, rgb(25, 50, 60) 200%);
+}
+
+.stocking {
+  position: absolute;
+  transform: rotate(20deg) scale(0.3) translateY(-1rem);
+}
+
+@media only screen and (min-width: 576px) {
+  .stocking {
+    transform: rotate(20deg) scale(0.35) translateY(-1rem);
+  }
+}
+
+.stocking .stocking-hanger {
+  width: 0.3rem;
+  height: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--stocking-heel);
+  transform-origin: bottom center;
+  transform: rotate(-20deg);
+}
+
+.stocking .stocking-wool {
+  position: relative;
+  z-index: 3;
+  width: 6.4rem;
+  height: 4rem;
+  margin-left: -0.2rem;
+  background-color: var(--stocking-wool); 
+}
+
+.stocking .stocking-wool::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 7.4rem;
+  height: 5rem;
+  top: -0.5rem;
+  left: -0.5rem;
+  background-image:
+    radial-gradient(var(--stocking-wool) 50%, rgba(255, 255, 255, 0) 70%);
+  background-position: 0 0;
+  background-size:  0.925rem 1rem;
+}
+
+.stocking .stocking-leg {
+  position: relative;
+  width: 6rem;
+  height: 10rem;
+  border-radius: 0 0 0 2rem;
+  background: repeating-linear-gradient(
+      20deg,
+      transparent,
+      transparent 10px,
+      var(--stocking-blue) 5px,
+      var(--stocking-blue) 20px
+    ),
+    repeating-linear-gradient(
+      110deg,
+      transparent,
+      transparent 10px,
+      var(--stocking-blue) 5px,
+      var(--stocking-blue) 20px
+    );
+  background-color: var(--stocking-red);
+  overflow: hidden;
+}
+
+.stocking .stocking-foot {
+  position: absolute;
+  width: 5rem;
+  height: 10rem;
+  border-radius: 2rem;
+  background: repeating-linear-gradient(
+      20deg,
+      transparent,
+      transparent 10px,
+      var(--stocking-blue) 5px,
+      var(--stocking-blue) 20px
+    ),
+    repeating-linear-gradient(
+      110deg,
+      transparent,
+      transparent 10px,
+      var(--stocking-blue) 5px,
+      var(--stocking-blue) 20px
+    );
+  background-color: var(--stocking-red);
+  transform-origin: top left;
+  transform: rotate(-70deg) translateY(-0.6rem);
+  overflow: hidden;
+}
+
+.stocking .stocking-heel {
+  position: relative;
+  z-index: 2;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 4rem;
+  background-color: var(--stocking-heel);
+}
+
+.stocking .stocking-leg .stocking-heel {
+  position: absolute;
+  bottom: -3rem;
+  margin-left: -3rem;
+}
+
+.stocking .stocking-foot .stocking-heel {
+  margin-left: -3rem;
+  margin-top: -2rem;
+}
+
+/**
+ * Day 4 - Animated 3D gift box
+ * https://codepen.io/johnnyfekete/pen/NWRxmwG
+ */
+:root {
+  --gift-box-color: #e63946;
+  --gift-box-edge-color: #590b11;
+  --wrap-color: #f1faee;
+  --wrap-ribbon-color: #c0e4e6;
+  --wrap-top-color: #d8efef;
+}
+
+.gift-box-day {
+  background: linear-gradient(200deg, #1d3557 33%, #457b9d 33%, #457b9d 66%, #a8dadc 66% );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gift-box-container {
+  width: 200px;
+  height: 200px;
+  perspective: 400px;
+  transform: translateY(-40px) scale(0.3);
+}
+
+@media only screen and (min-width: 576px) {
+  .gift-box-container {
+    transform: translateY(-20px) scale(0.4);
+  }
+}
+
+.gift-box {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  animation: rotation-3d 20s infinite linear;
+}
+
+.gift-box .gift-box__side,
+.gift-box .gift-box__end {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 2px solid var(--gift-box-edge-color);
+}
+
+.gift-box .gift-box-lid__side {
+  position: absolute;
+  width: 220px;
+  height: 50px;
+  border: 2px solid var(--gift-box-edge-color);
+}
+
+.gift-box .gift-box-lid__end {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border: 2px solid var(--gift-box-edge-color);
+}
+
+.gift-box .gift-box__side,
+.gift-box .gift-box-lid__side {
+  background: linear-gradient(to right,
+    var(--gift-box-color) 40%,
+    var(--wrap-color) 40%,
+    var(--wrap-color) 60%,
+    var(--gift-box-color) 60%
+  );
+}
+.gift-box .gift-box__end,
+.gift-box .gift-box-lid__end {
+  background: linear-gradient(to right,
+    transparent 40%,
+    var(--wrap-top-color) 40%,
+    var(--wrap-top-color) 60%,
+    transparent 60%
+  ),
+  linear-gradient(to bottom,
+    var(--gift-box-color) 40%,
+    var(--wrap-color) 40%,
+    var(--wrap-color) 60%,
+    var(--gift-box-color) 60%
+  );
+}
+
+.gift-box .gift-box__side--front { transform: rotateY(0deg) translateZ(100px); }
+.gift-box .gift-box__side--back { transform: rotateY(180deg) translateZ(100px); }
+.gift-box .gift-box__side--left { transform: rotateY(-90deg) translateZ(100px); }
+.gift-box .gift-box__side--right { transform: rotateY(90deg) translateZ(100px); }
+.gift-box .gift-box__side--top { transform: rotateX(90deg) translateZ(100px); }
+.gift-box .gift-box__side--bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+.gift-box .gift-box-lid__side--front { transform: rotateY(0deg) translateZ(110px) translateX(-10px) translateY(-10px); }
+.gift-box .gift-box-lid__side--back { transform: rotateY(180deg) translateZ(110px) translateX(10px) translateY(-10px); }
+.gift-box .gift-box-lid__side--left { transform: rotateY(-90deg) translateZ(120px)  translateY(-10px); }
+.gift-box .gift-box-lid__side--right { transform: rotateY(90deg) translateZ(100px)  translateY(-10px); }
+.gift-box .gift-box-lid__side--top { transform: rotateX(90deg) translateZ(120px) translateX(-10px) translateY(0); }
+
+
+.gift-box .ribbon-l {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border: 2px solid var(--wrap-ribbon-color);
+  border-radius: 50% 50% 0 50%;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50%;
+  transform: rotateX(75deg)
+             rotateY(90deg)
+             /* use a CSS variable for the translate, defined in CSS */
+             translateZ(calc(80px - var(--gift-box-position)))  
+             translateX(-85px)
+             translateY(-75px)
+             skewY(30deg);
+}
+
+.gift-box .ribbon-r {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border: 2px solid var(--wrap-ribbon-color);
+  border-radius: 50% 50% 0 50%;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50%;
+  transform: rotateX(-5deg)
+             rotateY(90deg)
+             /* use a CSS variable for the translate, defined in CSS */
+             translateZ(calc(80px - var(--gift-box-position)))  
+             translateX(-30px)
+             translateY(-110px)
+             skewY(30deg);
+}
+
+.ribbon-l-end {
+  position: absolute;
+  width: 40px;
+  height: 110px;
+  background:
+    linear-gradient(45deg, var(--wrap-top-color) 72%, transparent 72%), 
+    linear-gradient(-45deg, var(--wrap-top-color) 72%, transparent 72%);
+  border: 2px solid var(--gift-box-edge-color);
+  border-top: none;
+  border-bottom: none;
+  transform: rotateX(-70deg) translateX(80px) translateY(-80px) translateZ(-60px);
+}
+
+.ribbon-r-end {
+  position: absolute;
+  width: 40px;
+  height: 110px;
+  background:
+    linear-gradient(45deg, var(--wrap-top-color) 72%, transparent 72%), 
+    linear-gradient(-45deg, var(--wrap-top-color) 72%, transparent 72%);
+  border: 2px solid var(--gift-box-edge-color);
+  border-top: none;
+  border-bottom: none;
+  transform: rotateX(80deg) translateX(80px) translateY(-80px) translateZ(60px);
+}
+
+
+@keyframes rotation-3d {
+  from {
+    transform: translateZ(-100px) rotateY(50deg) rotateX(-5deg) rotateZ(-30deg)
+  }
+  to {
+    transform: translateZ(-100px) rotateY(409deg) rotateX(-5deg) rotateZ(-30deg)
+  }
+}
+
+
+
+
+/**
+ * Day 5 - Sledge in the snow
+ * https://codepen.io/johnnyfekete/pen/wvzGoRr
+ */
+
+
+:root {
+  --sledge-runner: #6c757d;
+  --sledge-wood-light: #9c6644;
+  --sledge-wood-dark: #7f5539;
+  --sledge-edge: #2d1e14;
+}
+
+.sledge-container {
+  background: linear-gradient(-20deg, #f8f9fa 60%, #3d405b 60%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sledge {
+  width: 20rem;
+  height: 10rem;
+  position: relative;
+  transform: rotate(-16deg) scale(0.25) translateX(-7rem) translateY(-5rem);
+}
+
+@media only screen and (min-width: 576px) {
+  .sledge {
+    transform: rotate(-16deg) scale(0.3) translateX(-7rem);
+  }
+}
+
+.sledge .sledge-runner__front {
+  width: 4rem;
+  height: 4rem;
+  overflow: hidden;
+  position: absolute;
+  top: 6rem;
+}
+.sledge .sledge-runner__front::after {
+  content: '';
+  display: block;
+  margin-top: -4rem;
+  width: 8rem;
+  height: 8rem;
+  background: radial-gradient(closest-side, transparent 75%, var(--sledge-runner) 27%, var(--sledge-runner) 99%, transparent 100%);
+}
+
+.sledge .sledge-runner__front--top {
+  transform-origin: top right;
+  transform: rotate(30deg);
+}
+
+.sledge .sledge-runner {
+  position: absolute;
+  width: 16rem;
+  height: 1rem;
+  background-color: var(--sledge-runner);
+  top: 9rem;
+  left: 4rem;
+}
+
+.sledge .sledge-runner__left-leg {
+  position: absolute;
+  width: 3rem;
+  height: 1rem;
+  background-color: var(--sledge-runner);
+  transform: rotate(120deg);
+  bottom: 1.2rem;
+  left: 1rem;
+}
+
+.sledge .sledge-runner__right-leg {
+  position: absolute;
+  width: 3rem;
+  height: 1rem;
+  background-color: var(--sledge-runner);
+  transform: rotate(60deg);
+  bottom: 1.2rem;
+  left: 8rem;
+}
+
+.sledge .sledge-runner__back {
+  position: absolute;
+  transform: scaleY(0.8) scaleX(0.95) translateX(3rem) translateY(-2rem);
+}
+
+.sledge .sledge-seat {
+  position: absolute;
+  z-index: 2;
+  top: 1.5rem;
+  left: 5rem;
+}
+
+.sledge .sledge-top {
+  transform: skewX(-40deg);
+}
+
+.sledge .sledge-top__piece {
+  box-sizing: border-box;
+  width: 15rem;
+  height: 0.8rem;
+  background: linear-gradient(to bottom, var(--sledge-wood-light) 0%, var(--sledge-wood-dark) 100%);
+  border: 1.5px solid var(--sledge-edge);
+}
+
+.sledge .sledge-back {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: skewY(-50deg) rotate(90deg) scaleX(1.8) scaleY(0.85) translateX(0.6rem) translateY(-0.4rem);
+}
+
+.sledge .sledge-back__piece {
+  box-sizing: border-box;
+  width: 0.8rem;
+  height: 0.8rem;
+  background: linear-gradient(to bottom, var(--sledge-wood-light) 0%, var(--sledge-wood-dark) 100%);
+  border: 1.5px solid var(--sledge-edge);
+}
+
+.sledge .sledge-side {
+  position: absolute;
+  left: -2rem;
+  margin-top: -0.05rem;
+  box-sizing: border-box;
+  width: 14.95rem;
+  height: 1.45rem;
+  background-color: var(--sledge-wood-dark);
+  border: 1.5px solid var(--sledge-edge);
+}
+
+
+
+
+/**
+ * Day 6 - Santa
+ * https://codepen.io/johnnyfekete/pen/oNzxMPW
+ */
+
+:root {
+  --santa-face: #f9dcc4;
+  --santa-beard: #ffffff;
+  --santa-moustache: #e0e0e0;
+  --santa-nose: #ffb5a7;
+  --santa-hat: #e63946;
+  --santa-border: #03071e;
+}
+
+.santa-container {
+  display: flex;
+  background:
+    repeating-linear-gradient(45deg, transparent, transparent 1rem, rgba(154, 140, 152, 0.3) 1rem, rgba(154, 140, 152, 0.3) 2rem),
+    repeating-linear-gradient(-45deg, transparent, transparent 1rem, rgba(154, 140, 152, 0.3) 1rem, rgba(154, 140, 152, 0.3) 2rem),
+    linear-gradient(to bottom, #f2e9e4, #f2e9e4);
+  align-items: center;
+  justify-content: center;
+}
+
+.santa {
+  width: 14rem;
+  height: 16rem;
+  position: relative;
+  
+  filter: drop-shadow(6px 6px 0 rgba(0, 0, 0, 0.3));
+  
+  transform: scale(0.33) translateY(-13rem) translateX(-3rem);
+}
+
+@media only screen and (min-width: 576px) {
+  .santa {
+    transform: scale(0.4) translateY(-8rem) translateX(-2rem);
+  }
+}
+
+.santa .santa-head {
+  position: absolute;
+  top: 4rem;
+  left: 1rem;
+  width: 12rem;
+  height: 12rem;
+  filter: drop-shadow(2px 2px 0 var(--santa-border))
+          drop-shadow(-2px 2px 0 var(--santa-border)) 
+          drop-shadow(2px -2px 0 var(--santa-border)) 
+          drop-shadow(-2px -2px 0 var(--santa-border));
+}
+
+.santa .santa-beard {
+  position: absolute;
+  left: 5rem;
+  width: 2rem;
+  height: 12rem;
+  background-color: var(--santa-beard);
+  border-radius: 1rem;
+  transform-origin: center center;
+  height: 12rem;
+}
+
+.santa .santa-beard:nth-child(2) { transform: rotate(15deg); }
+.santa .santa-beard:nth-child(3) { transform: rotate(30deg); }
+.santa .santa-beard:nth-child(4) { transform: rotate(45deg); }
+.santa .santa-beard:nth-child(5) { transform: rotate(60deg); }
+.santa .santa-beard:nth-child(6) { transform: rotate(75deg); }
+.santa .santa-beard:nth-child(7) { transform: rotate(90deg); }
+.santa .santa-beard:nth-child(8) { transform: rotate(105deg); }
+.santa .santa-beard:nth-child(9) { transform: rotate(120deg); }
+.santa .santa-beard:nth-child(10) { transform: rotate(135deg); }
+.santa .santa-beard:nth-child(11) { transform: rotate(150deg); }
+.santa .santa-beard:nth-child(12) { transform: rotate(165deg); }
+
+.santa .santa-face {
+  position: absolute;
+  left: 2rem;
+  top: 3rem;
+  width: 8rem;
+  height: 3rem;
+  overflow: hidden;
+}
+
+.santa .santa-face::before {
+  display: block;
+  content: '';
+  position: relative;
+  box-sizing: border-box;
+  z-index: 1;
+  top: -2rem;
+  width: 8rem;
+  height: 8rem;
+  background-color: var(--santa-face);
+  border-radius: 50%;
+  border: 2px solid var(--santa-border);
+}
+
+.santa .santa-moustache {
+  position: absolute;
+  z-index: 3;
+  top: 5rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--santa-moustache);
+  border-radius: 50%;
+  border: 2px solid var(--santa-border);
+}
+
+.santa .santa-moustache::after {
+  display: block;
+  content: '';
+  position: absolute;
+  left: -2rem;
+  width: 3rem;
+  height: 2rem;
+  background: radial-gradient(farthest-side, transparent 33.3%, var(--santa-border) 33.3%, var(--santa-border) 37%, var(--santa-moustache) 38%);
+  background-position: -3rem -2rem;
+  background-size: 300% 200%;
+  border-radius: 0 100% 0 100%;
+  border-bottom: 2px solid var(--santa-border);
+}
+
+.santa .santa-moustache--left {
+  left: 4rem;
+  transform: rotate(-10deg) translateX(-0.4rem) translateY(-0.2rem);
+}
+
+.santa .santa-moustache--right {
+  left: 6rem;
+  transform: scaleX(-1) rotate(-10deg) translateX(-0.1rem) translateY(-0.2rem);
+}
+
+.santa .santa-nose {
+  position: absolute;
+  z-index: 3;
+  left: calc(50% - 0.9rem);
+  top: 4.5rem;
+  width: 1.8rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  border: 2px solid var(--santa-border);
+  box-sizing: border-box;
+  background-color: var(--santa-nose);
+}
+
+.santa .santa-eye {
+  position: absolute;
+  z-index: 4;
+  top: 3.2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: var(--santa-border);
+}
+
+.santa .santa-eye::before {
+  position: absolute;
+  display: block;
+  content: '';
+  top: 0.8rem;
+  left: 0.3rem;
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+  background-color: var(--santa-beard);
+}
+
+.santa .santa-eye::after {
+  position: absolute;
+  display: block;
+  content: '';
+  top: 0.2rem;
+  left: 0.5rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background-color: var(--santa-beard);
+}
+
+.santa .santa-eye--left {
+  left: 4rem;
+}
+
+.santa .santa-eye--right {
+  left: 6.4rem;
+}
+
+.santa .santa-hat {
+  position: absolute;
+  top: -2rem;
+  left: -1rem;
+  width: 12rem;
+  height: 6rem;
+}
+
+.santa .santa-hat-background {
+  position: absolute;
+  width: 12rem;
+  height: 6rem;
+  border-radius: 6rem 6rem 0 0;
+  background: radial-gradient(circle at 20% 100%, transparent 14%, var(--santa-hat) 14%);
+  filter: drop-shadow(1px 1px 0 var(--santa-border))
+          drop-shadow(-1px 1px 0 var(--santa-border)) 
+          drop-shadow(1px -1px 0 var(--santa-border)) 
+          drop-shadow(-1px -1px 0 var(--santa-border));
+}
+
+.santa .santa-hat-front {
+  position: absolute;
+  top: 5.8rem;
+  left: 3rem;
+  width: 10rem;
+  height: 3rem;
+  filter: drop-shadow(1px 1px 0 var(--santa-border))
+          drop-shadow(-1px 1px 0 var(--santa-border)) 
+          drop-shadow(1px -1px 0 var(--santa-border)) 
+          drop-shadow(-1px -1px 0 var(--santa-border));
+}
+
+.santa .santa-hat-front-bg {
+  position: absolute;
+  width: 0.666rem;
+  height: 3rem;
+  border-radius: 0.333rem 0.333rem 0 0;
+  background: var(--santa-moustache);
+}
+
+.santa .santa-hat-front-bg:nth-child(1) { left: 0.666rem; }
+.santa .santa-hat-front-bg:nth-child(2) { left: 1.333rem; }
+.santa .santa-hat-front-bg:nth-child(3) { left: 2rem; }
+.santa .santa-hat-front-bg:nth-child(4) { left: 2.666rem; }
+.santa .santa-hat-front-bg:nth-child(5) { left: 3.333rem; }
+.santa .santa-hat-front-bg:nth-child(6) { left: 4rem; }
+.santa .santa-hat-front-bg:nth-child(7) { left: 4.666rem; }
+.santa .santa-hat-front-bg:nth-child(8) { left: 5.333rem; }
+.santa .santa-hat-front-bg:nth-child(9) { left: 6rem; }
+.santa .santa-hat-front-bg:nth-child(10) { left: 6.666rem; }
+.santa .santa-hat-front-bg:nth-child(11) { left: 7.333rem; }
+.santa .santa-hat-front-bg:nth-child(12) { left: 8rem; }
+.santa .santa-hat-front-bg:nth-child(13) { left: 8.666rem; }
+.santa .santa-hat-front-bg:nth-child(14) { left: 9.333rem; }
+
+.santa .santa-hat-front-side {
+  position: absolute;
+  left: -0.333rem;
+  width: 10.666rem;
+  height: 1rem;
+  border-radius: 0.5rem;
+  background: var(--santa-moustache);
+}
+
+.santa .santa-hat-front-side:nth-child(1) { top: 0.333rem; }
+.santa .santa-hat-front-side:nth-child(2) { top: 0.999rem; }
+.santa .santa-hat-front-side:nth-child(3) { top: 1.555rem; }
+.santa .santa-hat-front-side:nth-child(4) { top: 2.111rem; }
+
+
+.santa .santa-hat-pompom {
+  position: absolute;
+  top: 5.2rem;
+  width: 2rem;
+  height: 2rem;
+  filter: drop-shadow(1px 1px 0 var(--santa-border))
+          drop-shadow(-1px 1px 0 var(--santa-border)) 
+          drop-shadow(1px -1px 0 var(--santa-border)) 
+          drop-shadow(-1px -1px 0 var(--santa-border));
+}
+
+.santa .santa-hat-pompom-bg {
+  position: absolute;
+  width: 0.5rem;
+  height: 2rem;
+  background-color: var(--santa-beard);
+  border-radius: 0.25rem;
+  transform-origin: center center;
+}
+
+.santa .santa-hat-pompom-bg:nth-child(2) {
+  transform: rotate(30deg);
+}
+.santa .santa-hat-pompom-bg:nth-child(3) {
+  transform: rotate(60deg);
+}
+.santa .santa-hat-pompom-bg:nth-child(4) {
+  transform: rotate(90deg);
+}
+.santa .santa-hat-pompom-bg:nth-child(5) {
+  transform: rotate(120deg);
+}
+.santa .santa-hat-pompom-bg:nth-child(6) {
+  transform: rotate(150deg);
+}
+
+
+/**
+ * Day 7 - candle with a flame
+ * https://codepen.io/johnnyfekete/pen/ExgyPrb
+ */
+:root {
+  --candle-light: #e8eddf;
+  --candle-dark: #e8c2ca;
+  --candle-top: #d1b3c4;
+  --candle-bottom: #b76935;
+  --candle-string: #343434;
+  --candle-flame: #ff9900;
+}
+
+.candle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background: #000000;
+}
+
+.candle {
+  position: relative;
+  width: 6rem;
+  height: 12rem;
+  transform: scale(0.35) translateY(-6rem);
+}
+
+@media only screen and (min-width: 576px) {
+  .candle {
+    transform: scale(0.45) translateY(-2rem);
+  }
+}
+
+.candle .candle__body {
+  width: 3rem;
+  height: 8rem;
+  position: absolute;
+  z-index: 2;
+  left: 1.5rem;
+  bottom: 2rem;
+  background: linear-gradient(to right, var(--candle-light) 0, var(--candle-dark) 100%);
+}
+
+.candle .candle__body::before {
+  display: block;
+  content: '';
+  position: absolute;
+  top: -1rem;
+  width: 3rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 0, var(--candle-light) 0, var(--candle-top) 100%);
+}
+
+.candle .candle__body::after {
+  display: block;
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  width: 3rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: linear-gradient(to right, var(--candle-light) 0, var(--candle-dark) 100%);
+}
+
+.candle .candle__wax-1 {
+  position: absolute;
+  z-index: 3;
+  top: 3.5rem;
+  left: 3rem;
+  transform: scaleY(2);
+}
+
+.candle .candle__wax-2 {
+  position: absolute;
+  z-index: 1;
+  top: 3rem;
+  left: 4rem;
+  transform: scaleY(2.5);
+}
+
+.candle .candle__wax-3 {
+  position: absolute;
+  z-index: 3;
+  top: 2.8rem;
+  left: 1rem;
+  transform: scaleX(0.5);
+}
+
+
+.candle .candle__wax-1::after,
+.candle .candle__wax-2::after,
+.candle .candle__wax-3::after {
+  content: '';
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--candle-top);
+  border-radius: 0 0.5rem 0.5rem 0.5rem;
+  transform: rotate(45deg);
+}
+
+.candle .candle__bottom {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 6rem;
+  height: 3rem;
+  background-color: var(--candle-bottom);
+  border-radius: 50%;
+}
+
+.candle-string {
+  width: 0.2rem;
+  height: 0.8rem;
+  background-color: var(--candle-string);
+  position: absolute;
+  border-radius: 1rem;
+  transform: rotate(5deg);
+  top: 1.2rem;
+  left: 3rem;
+  z-index: 5;
+}
+
+.candle .candle__light {
+  position: absolute;
+  z-index: 4;
+  top: -2rem;
+  left: 1rem;
+  width: 4rem;
+  height: 4rem;
+  margin-top: 120px;
+  transform: translate(-66px, -250px) scale(0.33);
+  mix-blend-mode: screen;
+}
+
+.candle .candle__flame {
+  position: relative;
+    width: 500px;
+    height: 500px;
+    background: var(--candle-flame);
+    filter: blur(20px) contrast(10);
+    mix-blend-mode: screen;
+    border: 250px solid #000;
+    border-bottom-color: transparent;
+    border-radius: 40%;
+    box-sizing: border-box;
+    transform: scale(0.4, 1);
+}
+
+.candle .candle__flame-burn {
+  position: absolute;
+  top: 500px;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+  background: black;
+  border-radius: 100%;
+  filter: blur(1em);
+}
+
+@each $val, $i in 8px, 4px, 5px, 4px, 8px, 4px, 5px, 7px, 3px, 7px, 9px, 3px, 6px, 9px, 10px, 8px, 5px, 7px, 1px, 1px, 2px, 2px, 7px, 10px, 4px, 4px, 1px, 4px, 9px, 5px, 8px, 1px, 4px, 7px, 7px, 3px, 8px, 8px, 2px, 10px, 10px, 6px, 4px, 1px, 5px, 9px, 4px, 10px, 10px, 1px, 7px, 8px, 3px, 7px, 7px, 2px, 7px, 2px, 6px, 8px, 1px, 3px, 10px, 10px, 2px, 7px, 1px, 6px, 6px, 4px, 7px, 7px, 4px, 3px, 1px, 10px, 4px, 10px, 8px, 7px {
+  .candle .candle__flame-burn.burn-a:nth-child($(i)) {
+    height: $(val);
+  }
+}
+
+@each $val, $i in 30px, 7px, 34px, 31px, 18px, 44px, 33px, 41px, 7px, 40px, 38px, 21px, 24px, 13px, 3px, 26px, 22px, 10px, 11px, 45px, 29px, 46px, 1px, 37px, 24px, 36px, 39px, 23px, 16px, 23px, 13px, 19px, 21px, 29px, 4px, 37px, 9px, 5px, 2px, 29px, 41px, 34px, 37px, 12px, 19px, 9px, 38px, 44px, 11px, 25px, 41px, 34px, 20px, 29px, 47px, 10px, 3px, 48px, 10px, 45px, 8px, 49px, 32px, 45px, 17px, 23px, 12px, 38px, 9px, 26px, 11px, 45px, 30px, 15px, 7px, 23px, 25px, 23px, 31px, 20px {
+  .candle .candle__flame-burn:nth-child($(i)) {
+    height: $(val);
+  }
+}
+
+@each $val, $i in -49px, -22px, -188px, -238px, 29px, -88px, -137px, -43px, -244px, -150px, 78px, 130px, 155px, -36px, 230px, 74px, 31px, -237px, 154px, -236px, -168px, -69px, 70px, 187px, -78px, -231px, -20px, -8px, -234px, -196px, 69px, 210px, -45px, 113px, -240px, -156px, 22px, 192px, -148px, 7px, 92px, -107px, 83px, 19px, 14px, 46px, -145px, 54px, -209px, 221px, -107px, -101px, 10px, -215px, 39px, -3px, 21px, -216px, 132px, 61px, 17px, -129px, -231px, 78px, 219px, 195px, -15px, -85px, 60px, -8px, -146px, 128px, 18px, 33px, -193px, 74px, 210px, -211px, 247px, -113px {
+  .candle .candle__flame-burn:nth-child($(i)) {
+    margin-left: $(val);
+  }
+}
+
+@each $val, $i in 2832, 2158, 2133, 2873, 1394, 2969, 2225, 1025, 2588, 1603, 2294, 2400, 2217, 1316, 1142, 1103, 1268, 1009, 2948, 2103, 1769, 1220, 1355, 2268, 2120, 1346, 2650, 2655, 2663, 1849, 2888, 1755, 1138, 1567, 1600, 1467, 2686, 2380, 1005, 1610, 1134, 1161, 1790, 1219, 1693, 2412, 1140, 2604, 2307, 1627, 2490, 2122, 1612, 1326, 1416, 2002, 2241, 2068, 1079, 1493, 1822, 1317, 1644, 2634, 1527, 1393, 2391, 2513, 1142, 1095, 1684, 1095, 1282, 1567, 1855, 2786, 1138, 2428, 1436, 1011 {
+  .candle .candle__flame-burn:nth-child($(i)) {
+    animation: burning $(val)ms -3000ms infinite linear;
+  }
+}
+
+
+@keyframes burning {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-600px);
+  }
+}
+      </style>
